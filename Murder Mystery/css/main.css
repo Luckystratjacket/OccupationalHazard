@@ -12,7 +12,7 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    background-color: blue;
+    background-color: rgb(122, 188, 226, 0.3);
     background-image: url('../img/brick_texture.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,14 +64,13 @@ div {
 
 .dialog {
     background-color: rgba(0, 0, 0, 0.7);
-    color:red;
+    color: rgb(198, 71, 71);
     font-size: 20px;
     font-family: Georgia;
     font-style: italic;
     padding: 50px;
-    text-shadow:0px 0px 10px rgba(255, 5,5,0.9);
     border-top: 10px;
-    border-bottom: 0px;
+    border-bottom: 10px;
     border-right: 0px;
     border-left: 0px;
     border-color: black;
@@ -84,10 +83,9 @@ div {
 }
 
 .options div {
-    color: white;
+    color: rgb(122, 188, 226);
     font-size: 15px;
     font-family: Georgia;
     font-style: italic;
     padding: 10px 20px;
-    text-shadow: 0px 0px 10px rgba(255, 5,5,0.9);
 }

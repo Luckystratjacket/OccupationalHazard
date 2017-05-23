@@ -5,7 +5,7 @@ function gameActions(action, state) {
             newState = Object.assign(state, {
                 dialog: 'You decide to not take the case. On your way home from work, you suffer a fatal car crash. Game Over.',
                 choices: ['New game', ''],
-                actions: ['startGame', ''],
+                actions: ['game.start', ''],
                 background: [{ url: './img/Jo.png', width: '100%', height: '100%' }],
                 foreground: []
             });
