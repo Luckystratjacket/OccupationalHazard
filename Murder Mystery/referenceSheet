@@ -1,0 +1,12 @@
+ switch (action) {
+        case '':  
+               newState = Object.assign(newState, {
+                dialog: '',
+                choices: ['', ''],
+                actions: ['', ''],
+            });
+            
+
+            break;
+    }
+    var newState = state;
