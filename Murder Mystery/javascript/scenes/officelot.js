@@ -68,7 +68,7 @@ function officelotActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] -"Ha. Ha. We\'re here."',
                 choices: ['Exit the elevator into the conference room', ''],
-                actions: ['conference.ent', ''],
+                actions: ['conference.rudent', ''],
             });
 
 
@@ -77,7 +77,7 @@ function officelotActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] -"Oh that? It\'s nothing. Just corporate showing that big, ugly unfeeling soul of theirs again! Although I am getting promoted next week to District manager, so that\'ll be a change of pace. It\'s offsite and everything. Hey look, we\'re here!"',
                 choices: ['Exit the elevator into the conference room', ''],
-                actions: ['conference.ent', ''],
+                actions: ['conference.rudent', ''],
             });
 
 
@@ -102,9 +102,9 @@ function officelotActions(action, state) {
             break;
         case 'dia8':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson] -"Huh. Well hopefully that lets you solve the case easier!" *Nervous Laughter*',
+                dialog: '[Dave Watson] -"Huh. Well hopefully that lets you solve the case easier." *Nervous Laughter*',
                 choices: ['Exit the elevator into the conference room', ''],
-                actions: ['conference.ent', ''],
+                actions: ['conference.rudent', ''],
             });
 
 
