@@ -19,7 +19,14 @@ function conferenceActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] -"Oh, you wanna look around first, huh? I think it might be a better idea if you went back and talked to the emplyees..."',
                 choices: ['Continue looking around', 'Return to the conference room'],
-                actions: ['conference.snoprud', ''],
+                actions: ['conference.snoprud', 'conference.inv'],
+            });
+            break;
+        case 'snoprud':
+            newState = Object.assign(newState, {
+                dialog: '',
+                choices: ['', ''],
+                actions: ['', ''],
             });
             break;
     }
