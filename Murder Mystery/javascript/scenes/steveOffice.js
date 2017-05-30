@@ -11,6 +11,5 @@ function steveofficeActions(action, state) {
 
             break;
     }
-    var newState = state;
     return newState;
 }

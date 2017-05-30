@@ -1,21 +1,20 @@
 function conferenceActions(action, state) {
+    var newState = state;
     switch (action) {
-        case '':
-            newState = Object.assign(newState, {
+        case '':  
+               newState = Object.assign(newState, {
                 dialog: '',
                 choices: ['', ''],
                 actions: ['', ''],
             });
-
-
             break;
-        case '':
-            newState = Object.assign(newState, {
+        case '':  
+               newState = Object.assign(newState, {
                 dialog: '',
                 choices: ['', ''],
                 actions: ['', ''],
             });
-        default:
-            return false;
+            break;
     }
+    return newState;
 }

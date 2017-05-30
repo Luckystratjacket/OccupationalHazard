@@ -11,6 +11,5 @@ function megofficeActions(action, state) {
 
             break;
     }
-    var newState = state;
     return newState;
 }

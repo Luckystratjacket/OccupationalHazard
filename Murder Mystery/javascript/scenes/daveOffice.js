@@ -11,6 +11,5 @@ function daveofficeActions(action, state) {
 
             break;
     }
-    var newState = state;
     return newState;
 }
