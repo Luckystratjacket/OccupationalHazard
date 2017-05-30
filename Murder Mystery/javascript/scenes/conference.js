@@ -1,19 +1,19 @@
 function conferenceActions(action, state) {
     switch (action) {
-        case 'ignoreGame':
+        case '':
             newState = Object.assign(newState, {
-                dialog: 'You decide to not take the case. On your way home from work, you suffer a fatal car crash. Game Over.',
-                choices: ['New game', ''],
-                actions: ['startGame', ''],
+                dialog: '',
+                choices: ['', ''],
+                actions: ['', ''],
             });
 
 
             break;
-        case 'startGame':
+        case '':
             newState = Object.assign(newState, {
-                dialog: 'You enter the building. Contimue to the office or remain in the parking lot?',
-                choices: ['Enter the Office', 'Remain in parking lot'],
-                actions: ['ETO', 'RIL'],
+                dialog: '',
+                choices: ['', ''],
+                actions: ['', ''],
             });
         default:
             return false;
