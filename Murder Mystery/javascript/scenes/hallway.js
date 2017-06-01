@@ -1,7 +1,7 @@
 function hallwayActions(action, state) {
     var newState = state;
         switch (action) {
-        case '':  
+        case 'confent':  
                newState = Object.assign(newState, {
                 dialog: '',
                 choices: ['', ''],
