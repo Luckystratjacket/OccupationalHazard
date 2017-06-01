@@ -33,46 +33,88 @@ function conferenceActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] -"Welcome to our conference room! These are my marvelous employees,and youre here to investigate which one of em killed another one of my employees! Who do you want to talk to first?',
                 choices: ['Steve', 'Meg', 'Alexandra', 'Benny'],
-                actions: ['conference.steve', 'conference.meg', 'conference.alex', 'conference.ben'], 
+                actions: ['conference.steve', 'conference.meg', 'conference.alex', 'conference.ben'],
             });
             break;
-            case 'steve':  
-               newState = Object.assign(newState, {
+        case 'invwsteve':
+            newState = Object.assign(newState, {
+                dialog: '[Dave Watson] -"Welcome to our conference room! These are my marvelous employees,and youre here to investigate which one of em killed another one of my employees! Who do you want to talk to first?',
+                choices: ['Meg', 'Alexandra', 'Benny'],
+                actions: ['conference.meg', 'conference.alex', 'conference.ben'],
+            });
+            break;
+        case 'steve':
+            newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - "Hi, nice to meet you. Names Steve."',
                 choices: ['Nice to meet you too.', 'Uhhh... Hi?', 'Go back to Dave'],
-                actions: ['steve2', 'steve3', ''],
+                actions: ['conference.steve2', 'conference.steve3', 'conference.inv'],
             });
             break;
-            case 'steve2':  
-               newState = Object.assign(newState, {
+        case 'steve2':
+            newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - "Well someone\'s cheery. Good to know that detectives wear a smile on their face when they investigate a murder. Bet it keeps you sane."',
                 choices: ['Well someone woke up on the wrong side of the bed this morning.', 'Haha! Who said I was sane?'],
-                actions: ['', ''],
+                actions: ['conference.steve4', 'conference.steve5'],
             });
             break;
-            case 'steve3':  
-               newState = Object.assign(newState, {
+        case 'steve3':
+            newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - "Oh hey there. Cat got your tongue? "',
-                choices: ['No, but It seems like it hasn\'t gotten yours.', ''],
-                actions: ['', ''],
+                choices: ['No. What do you know about the murder that happened here?', '...'],
+                actions: ['conference.steve6', 'conference.steve7'],
             });
             break;
-            case 'meg':  
-               newState = Object.assign(newState, {
+        case 'steve4':
+            newState = Object.assign(newState, {
+                dialog: '[Steven Avocanda] - "Well considering my bed is against a wall and I didnt fall down 20 stories when I woke up, I can say I definitely did not wake up on the wrong side. But I did stumble upon a dead body at work today so I guess that might be a catalyst to my current state of mind."',
+                choices: ['No need to get snarky with me, Steve. Just trying to do my job.', 'Oh, I\'m so sorry. I didn\'t realize you were the first person to see the body.'],
+                actions: ['conference.', 'conference.'],
+            });
+            break;
+        case 'steve5':
+            newState = Object.assign(newState, {
+                dialog: '[Steven Avocanda] - "Well no one did. I would assume that the person that my boss hired was at least semi-competent in their job. Thanks for killing those hopes." *Steve leaves out the back*',
+                choices: ['Return to Dave'],
+                actions: ['conference.invwsteve'],
+            });
+            break;
+        case 'steve6':
+            newState = Object.assign(newState, {
+                dialog: '[Steven Avocanda] - "Direct and to the point. I like it. I found the body of my coworker when I came in this morning. Serves me right for coming in early. I\'ve been crammed in all morning, and can\'t get that image out of my head. Oh gosh. Poor John."',
+                choices: ['', ''],
+                actions: ['conference.', 'conference.'],
+            });
+            break;
+        case 'steve7':
+            newState = Object.assign(newState, {
+                dialog: '[Steven Avocanda] - ""',
+                choices: ['', ''],
+                actions: ['conference.', 'conference.'],
+            });
+            break;
+        case 'steve':
+            newState = Object.assign(newState, {
+                dialog: '[Steven Avocanda] - ""',
+                choices: ['', ''],
+                actions: ['conference.', 'conference.'],
+            });
+            break;
+        case 'meg':
+            newState = Object.assign(newState, {
                 dialog: '',
                 choices: ['', ''],
                 actions: ['', ''],
             });
             break;
-            case 'alex':  
-               newState = Object.assign(newState, {
+        case 'alex':
+            newState = Object.assign(newState, {
                 dialog: '',
                 choices: ['', ''],
                 actions: ['', ''],
             });
             break;
-            case 'ben':  
-               newState = Object.assign(newState, {
+        case 'ben':
+            newState = Object.assign(newState, {
                 dialog: '',
                 choices: ['', ''],
                 actions: ['', ''],
