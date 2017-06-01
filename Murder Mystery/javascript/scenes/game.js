@@ -15,6 +15,7 @@ function gameActions(action, state) {
                 dialog: 'You enter the building. Continue to the office or remain in the parking lot?',
                 choices: ['Enter the Office', 'Remain in parking lot'],
                 actions: ['officelot.ETO', 'parkingLot.RIL'],
+                background: [{ url: './img/parkingLotNormal.png', width: '100%', height: '100%' }],
             });
 
             newState.items.push('pencil');
