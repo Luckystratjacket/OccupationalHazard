@@ -6,6 +6,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] - "Hi, I\'m Dave! Glad you could come on such short notice! What was your name, again?" ',
                 choices: ['[Enter Name Here]', 'Steve'],
                 actions: ['officelot.ETO1', 'officelot.ETO11'],
+                background: [{ url: './img/officeLobby.png', width: '100%', height: '100%' }],
             });
 
 
@@ -15,6 +16,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] - "Nice to meet you, Enter Name Here! Wow, that\'s an interesting name. Can\'t say I\'ve ever heard of a name thats made of more than 1 word before. Lets get upstairs before my employees start thinking that I sold company secrets! Ha! Like I\'d ever do that."',
                 choices: ['Continue upstairs with Dave', ''],
                 actions: ['officelot.ele', ''],
+                background: [{ url: './img/officeLobby.png', width: '100%', height: '100%' }],
             });
 
 
@@ -24,6 +26,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] - "Nice to meet you, Steve! Let\'s get upstairs before my employees start thinking that I sold company secrets! Ha! Like I\'d ever do that again!"',
                 choices: ['Continue upstairs with Dave', ''],
                 actions: ['officelot.ele', ''],
+                background: [{ url: './img/officeLobby.png', width: '100%', height: '100%' }],
             });
 
 
@@ -33,6 +36,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] - "So, ahh, welcome to Antrax! Due to security reasons, I do have to say that anything you see in our private testing facilities that does not directly relate to your case cannot be shared outside of this office. Move around all ya want, but if you find anything, just lemme know, Mkay?"',
                 choices: ['So are you hiding anything?', 'Why tell you?'],
                 actions: ['officelot.dia', 'officelot.dia2'],
+                background: [{ url: './img/elevator1.png', width: '100%', height: '100%' }],
             });
 
 
@@ -42,6 +46,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] - "Huh? No, Im not hiding anything! But Im sure we all have our personal lives, and some us want them to remain personal. Just don\'t ask too many questions you don\'t need to ask."',
                 choices: ['Oh. That makes sense.', 'That sounds like someone who\'s hiding something would say.'],
                 actions: ['officelot.dia3', 'officelot.dia4'],
+                background: [{ url: './img/elevator2.png', width: '100%', height: '100%' }],
             });
 
 
@@ -51,6 +56,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] - "Oh. Well, I\'m the leader of our branch of Amtrax! I\'ve worked here 6 years, and this is the job that I get after so many years of service. Stuck as a manager of a remote location. Ha!"',
                 choices: ['Sounds like you\'re pretty mad about your job', 'What do you mean by remote location?'],
                 actions: ['officelot.dia5', 'officelot.dia6'],
+                background: [{ url: './img/elevator2.png', width: '100%', height: '100%' }],
             });
 
 
@@ -60,6 +66,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] -"Oh! We\'re here! Welcome to the 3rd floor of our facility, and the place where my employee John was murdered. We also had a killer Taco Tuesday last thursday!"',
                 choices: ['Exit the elevator into the conference room', ''],
                 actions: ['conference.ent', ''],
+                background: [{ url: './img/elevator3.png', width: '100%', height: '100%' }],
             });
 
 
