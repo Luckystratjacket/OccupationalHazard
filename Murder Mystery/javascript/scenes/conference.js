@@ -39,7 +39,21 @@ function conferenceActions(action, state) {
             case 'steve':  
                newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - "Hi, nice to meet you. Names Steve."',
-                choices: ['Nice to meet you too.', ''],
+                choices: ['Nice to meet you too.', 'Uhhh... Hi?', 'Go back to Dave'],
+                actions: ['steve2', 'steve3', ''],
+            });
+            break;
+            case 'steve2':  
+               newState = Object.assign(newState, {
+                dialog: '[Steven Avocanda] - "Well someone\'s cheery. Good to know that detectives wear a smile on their face when they investigate a murder. Bet it keeps you sane."',
+                choices: ['Well someone woke up on the wrong side of the bed this morning.', 'Haha! Who said I was sane?'],
+                actions: ['', ''],
+            });
+            break;
+            case 'steve3':  
+               newState = Object.assign(newState, {
+                dialog: '[Steven Avocanda] - "Oh hey there. Cat got your tongue? "',
+                choices: ['No, but It seems like it hasn\'t gotten yours.', ''],
                 actions: ['', ''],
             });
             break;
