@@ -68,7 +68,7 @@ function conferenceActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - "Well considering my bed is against a wall and I didnt fall down 20 stories when I woke up, I can say I definitely did not wake up on the wrong side. But I did stumble upon a dead body at work today so I guess that might be a catalyst to my current state of mind."',
                 choices: ['No need to get snarky with me, Steve. Just trying to do my job.', 'Oh, I\'m so sorry. I didn\'t realize you were the first person to see the body.'],
-                actions: ['conference.', 'conference.'],
+                actions: ['conference.steve8', 'conference.steve9'],
             });
             break;
         case 'steve5':
@@ -80,19 +80,26 @@ function conferenceActions(action, state) {
             break;
         case 'steve6':
             newState = Object.assign(newState, {
-                dialog: '[Steven Avocanda] - "Direct and to the point. I like it. I found the body of my coworker when I came in this morning. Serves me right for coming in early. I\'ve been crammed in all morning, and can\'t get that image out of my head. Oh gosh. Poor John."',
-                choices: ['', ''],
-                actions: ['conference.', 'conference.'],
+                dialog: '[Steven Avocanda] - "Direct and to the point. I like your drive. I found the body of my coworker when I came in this morning. Serves me right for coming in early. I\'ve been stuck in this office all morning, and can\'t get that image out of my head. Oh gosh. Poor John. Excuse me" *Steve leaves*',
+                choices: ['Return to Dave'],
+                actions: ['conference.invwsteve'],
             });
             break;
         case 'steve7':
             newState = Object.assign(newState, {
-                dialog: '[Steven Avocanda] - ""',
-                choices: ['', ''],
-                actions: ['conference.', 'conference.'],
+                dialog: '[Steven Avocanda] - "Huh. You must really be mute. I\'ll be here if you ever decide to talk to anyone ever again."',
+                choices: ['Return to Dave', ],
+                actions: ['conference.inv', ],
             });
             break;
-        case 'steve':
+        case 'steve8':
+            newState = Object.assign(newState, {
+                dialog: '[Steven Avocanda] - "Ooh Im\'m so sorry. I didn\'t mean to hurt your sensitive feelings. Well if you have to know, I was the one that found your victom\'s body. He was sprawled out on his desk like some sort of ragdoll that a child just discarded. Horrible scene. Ugh. Just thinking about it gives me flashbacks. Please excuse me." *Steve Leaves*',
+                choices: ['Return to Dave', ],
+                actions: ['conference.invwsteve', ''],
+            });
+            break;
+        case 'steve9':
             newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - ""',
                 choices: ['', ''],
