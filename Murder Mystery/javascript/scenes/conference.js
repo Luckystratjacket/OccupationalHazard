@@ -12,21 +12,28 @@ function conferenceActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] -"Welcome to our top Office! All our employees are in the conference room, so let me go ahead and introduce you to them!"',
                 choices: ['Proceed to the conference room with Dave', 'Look around first'],
-                actions: ['conference.inv', 'conference.snop'],
+                actions: ['conference.inv2', 'conference.snop'],
             });
             break;
         case 'snop':
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] -"Oh, you wanna look around first, huh? I think it might be a better idea if you went back and talked to the emplyees..."',
                 choices: ['Continue looking around', 'Return to the conference room'],
-                actions: ['conference.snoprud', 'conference.inv'],
+                actions: ['conference.snoprud', 'conference.inv2'],
             });
             break;
         case 'snoprud':
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] -"Well, fine. Feel free to look around then. You should probably introduce yourself first to the people in there, but hey, but hey, who am I to know how things work here? I\'m only the boss!"',
                 choices: ['Contiue looking around', 'Go into the conference room and meet the staff'],
-                actions: ['hallway.confent', 'conference.inv'],
+                actions: ['hallway.confent', 'conference.inv2'],
+            });
+            break;
+        case 'inv2':
+            newState = Object.assign(newState, {
+                dialog: '[Dave Watson] -"Well I should probably tell you a bit about your case. John was killed yesterday, and we stumbled upon his body earlier today."',
+                choices: ['Continue with Dave', ''],
+                actions: ['conference.inv', ''],
             });
             break;
         case 'inv':
@@ -101,14 +108,56 @@ function conferenceActions(action, state) {
             break;
         case 'steve9':
             newState = Object.assign(newState, {
-                dialog: '[Steven Avocanda] - ""',
-                choices: ['', ''],
-                actions: ['conference.', 'conference.'],
+                dialog: '[Steven Avocanda] - "Its fine. Many people can sometimes be a bit brash and arrogant, like you when they dont know the full story.  But even thinking about that body.. Ugh. PLease excuse me." *Steve Leaves*',
+                choices: ['Return to Dave', ''],
+                actions: ['conference.invwsteve', 'conference.'],
             });
             break;
         case 'meg':
             newState = Object.assign(newState, {
-                dialog: '',
+                dialog: '[Meghan McWaters]-"Oh hi there! Nice to meet you! My name\'s Meghan, but people just call me Meg."',
+                choices: ['Nice to meet you Meg!', 'What do you know about John?'],
+                actions: ['conference.meg2', 'conference.meg3'],
+            });
+            break;
+        case 'meg2':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-"Wow! Usually I would expect a detective to just get right down to those questions, but you actually seem nice! Now go ahead and pick my brain with the questions I know you\'re dying to ask!"',
+                choices: ['What do you know about John?', 'Were you and John close?'],
+                actions: ['conference.meg31', 'conference.meg5'],
+            });
+            break;
+        case 'meg3':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-"Uhm.. Let\'s see... I know Steve had a kid. And Isn\'t that his Ex. standing right over there? I think her name was Alexandria or something like that."',
+                choices: ['Is that all you know about John?', 'Were you and John close?'],
+                actions: ['conference.meg4', 'conference.meg5'],
+            });
+            break;
+        case 'meg31':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-"Uhm.. Let\'s see... I know Steve had a kid. And Isn\'t that his Ex. standing right over there? I think her name was Alexandria or something like that."',
+                choices: ['Is that all you know about John?', 'Were you and John close?'],
+                actions: ['conference.meg41', 'conference.meg5'],
+            });
+            break;
+            case 'meg4':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-""',
+                choices: ['', ''],
+                actions: ['', ''],
+            });
+            break;
+            case 'meg41':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-"Actually, come to think of it, it is pretty suspicious that Steve had been gone the last 2 days before he showed up convieniently to John\'s dead body."',
+                choices: ['', ''],
+                actions: ['', ''],
+            });
+            break;
+            case 'meg5':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-""',
                 choices: ['', ''],
                 actions: ['', ''],
             });
