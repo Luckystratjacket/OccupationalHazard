@@ -95,14 +95,14 @@ function conferenceActions(action, state) {
         case 'steve7':
             newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - "Huh. You must really be mute. I\'ll be here if you ever decide to talk to anyone ever again."',
-                choices: ['Return to Dave', ],
-                actions: ['conference.inv', ],
+                choices: ['Return to Dave',],
+                actions: ['conference.inv',],
             });
             break;
         case 'steve8':
             newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - "Ooh Im\'m so sorry. I didn\'t mean to hurt your sensitive feelings. Well if you have to know, I was the one that found your victom\'s body. He was sprawled out on his desk like some sort of ragdoll that a child just discarded. Horrible scene. Ugh. Just thinking about it gives me flashbacks. Please excuse me." *Steve Leaves*',
-                choices: ['Return to Dave', ],
+                choices: ['Return to Dave',],
                 actions: ['conference.invwsteve', ''],
             });
             break;
@@ -141,24 +141,38 @@ function conferenceActions(action, state) {
                 actions: ['conference.meg41', 'conference.meg5'],
             });
             break;
-            case 'meg4':
+        case 'meg4':
             newState = Object.assign(newState, {
-                dialog: '[Meghan McWaters]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Meghan McWaters]-"Yeah I\'m sorry, but yeah that\'s all I can think of right now"',
+                choices: ['Were you and John Close?', ''],
+                actions: ['conference.meg5', ''],
             });
             break;
-            case 'meg41':
+        case 'meg41':
             newState = Object.assign(newState, {
                 dialog: '[Meghan McWaters]-"Actually, come to think of it, it is pretty suspicious that Steve had been gone the last 2 days before he showed up convieniently to John\'s dead body."',
-                choices: ['', ''],
-                actions: ['', ''],
+                choices: ['Were you and John Close?', 'What do you mean by that?'],
+                actions: ['conference.meg5', 'conference.meg6'],
             });
             break;
-            case 'meg5':
+        case 'meg5':
             newState = Object.assign(newState, {
-                dialog: '[Meghan McWaters]-""',
-                choices: ['', ''],
+                dialog: '[Meghan McWaters]-"Well, we were as close as 2 coworkers could be. I brought him coffee in the morning. Made it myself. Used to work as a Barista before I got this job. Shows you what a Bachelor\'s Degree in Chemistry can get you. Ha."',
+                choices: ['So you have a bachelors degree in Chemistry?', ''],
+                actions: ['conference.meg7', ''],
+            });
+            break;
+        case 'meg6':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-"Well, Steve had just accumulated a few days of vacation last week and just burned them all. Im just sayin\' its kind of suspicious that he went convieniently on vacation right before he found him."',
+                choices: ['Were you and John Close?', ''],
+                actions: ['conference.meg5', ''],
+            });
+            break;
+        case 'meg7':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-"Why yes I do! It\'s not like i use it here either! All I do is file paperwork. Should really consider doing the Walter White approach, but I\'m good."',
+                choices: ['Is that all you would like to say to me?', ''],
                 actions: ['', ''],
             });
             break;
