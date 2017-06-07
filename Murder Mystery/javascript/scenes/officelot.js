@@ -11,6 +11,16 @@ function officelotActions(action, state) {
 
 
             break;
+            case 'ETOM':
+            newState = Object.assign(newState, {
+                dialog: '[Dave Watson] - "Oh hey did the parking lot just give you one of those mind numbing headaches again? I just attribute that to stress! Ha!" ',
+                choices: ['Continue following Dave', ''],
+                actions: ['officelot.ETO1', ''],
+                background: [{ url: './img/officeLobby.png', width: '100%', height: '100%' }],
+            });
+
+
+            break;
         case 'ETO1':
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] - "Nice to meet you, Enter Name Here! Wow, that\'s an interesting name. Can\'t say I\'ve ever heard of a name thats made of more than 1 word before. Lets get upstairs before my employees start thinking that I sold company secrets! Ha! Like I\'d ever do that."',
