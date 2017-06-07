@@ -14,8 +14,8 @@ function megofficeActions(action, state) {
     switch (action) {
         case 'ent2':  
                newState = Object.assign(newState, {
-                dialog: '[Lloyd Newman] - "Miss McWaters',
-                choices: ['', ''],
+                dialog: '[Lloyd Newman] - "Miss McWaters i saw you bringing coffee over to Mr.Stalwart',
+                choices: ['ask her if she does brings him coffee everyday or she did it today', 'ask her if she knew how did john puts in his coffee'],
                 actions: ['megoffice.dia2', 'megoffice.snop2'],
             });
             break;
