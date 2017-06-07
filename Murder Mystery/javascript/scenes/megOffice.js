@@ -22,3 +22,12 @@ function megofficeActions(action, state) {
     }
     return newState;
 }
+    switch (action) {
+        case '':  
+               newState = Object.assign(newState, {
+                dialog: '',
+                choices: ['', ''],
+                actions: ['', ''],
+            });
+            break;
+    }
