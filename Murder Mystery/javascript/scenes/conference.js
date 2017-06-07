@@ -172,7 +172,28 @@ function conferenceActions(action, state) {
         case 'meg7':
             newState = Object.assign(newState, {
                 dialog: '[Meghan McWaters]-"Why yes I do! It\'s not like i use it here either! All I do is file paperwork. Should really consider doing the Walter White approach, but I\'m good."',
-                choices: ['Is that all you would like to say to me?', ''],
+                choices: ['Do you have any more comments?', 'Who do you think did it?'],
+                actions: ['conference.meg8', 'conference.meg9'],
+            });
+            break;
+            case 'meg8':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-"Well not really. I do have my suspicions on who did it but that seems rather unprofessional to just say that I think. You should probably ask the other people some questions."',
+                choices: ['Return to Dave', ''],
+                actions: ['conference.inv', ''],
+            });
+            break;
+            case 'meg9':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-"Well, to tell you the truth, I think its Unprofessional to accuse someone. I\'m sure I only know a little about the story, but right now I think Steve did it. I think you should ask some people more questions."',
+                choices: ['Return to Dave', ''],
+                actions: ['conference.inv', ''],
+            });
+            break;
+            case 'meg10':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]-""',
+                choices: ['', ''],
                 actions: ['', ''],
             });
             break;
