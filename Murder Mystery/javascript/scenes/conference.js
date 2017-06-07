@@ -31,7 +31,7 @@ function conferenceActions(action, state) {
             break;
         case 'inv2':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson] -"Well I should probably tell you a bit about your case. John was killed yesterday, and we stumbled upon his body earlier today."',
+                dialog: '[Dave Watson] -"Well I should probably tell you a bit about your case. John was killed yesterday, and we stumbled upon his body earlier today. I called forward everyone that has "',
                 choices: ['Continue with Dave', ''],
                 actions: ['conference.inv', ''],
             });
@@ -39,8 +39,15 @@ function conferenceActions(action, state) {
         case 'inv':
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] -"Welcome to our conference room! These are my marvelous employees,and youre here to investigate which one of em killed another one of my employees! Who do you want to talk to first?',
-                choices: ['Steve', 'Meg', 'Alexandra', 'Benny'],
+                choices: ['Steve', 'Meg', 'Alexandra', 'Benny', ],
                 actions: ['conference.steve', 'conference.meg', 'conference.alex', 'conference.ben'],
+            });
+            break;
+            case 'invfin':
+            newState = Object.assign(newState, {
+                dialog: '[Dave Watson] -"Welcome to our conference room! These are my marvelous employees,and youre here to investigate which one of em killed another one of my employees! Who do you want to talk to first?',
+                choices: ['Steve', 'Meg', 'Alexandra', 'Benny', 'done with investigation'],
+                actions: ['conference.steve', 'conference.meg', 'conference.alex', 'conference.ben', 'conference.done'],
             });
             break;
         case 'invwsteve':
@@ -96,7 +103,7 @@ function conferenceActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Steven Avocanda] - "Huh. You must really be mute. I\'ll be here if you ever decide to talk to anyone ever again."',
                 choices: ['Return to Dave',],
-                actions: ['conference.inv',],
+                actions: ['conference.invfin',],
             });
             break;
         case 'steve8':
@@ -180,14 +187,14 @@ function conferenceActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Meghan McWaters]-"Well not really. I do have my suspicions on who did it but that seems rather unprofessional to just say that I think. You should probably ask the other people some questions."',
                 choices: ['Return to Dave', ''],
-                actions: ['conference.inv', ''],
+                actions: ['conference.invfin', ''],
             });
             break;
             case 'meg9':
             newState = Object.assign(newState, {
                 dialog: '[Meghan McWaters]-"Well, to tell you the truth, I think its Unprofessional to accuse someone. I\'m sure I only know a little about the story, but right now I think Steve did it. I think you should ask some people more questions."',
                 choices: ['Return to Dave', ''],
-                actions: ['conference.inv', ''],
+                actions: ['conference.invfin', ''],
             });
             break;
         case 'alex':
@@ -214,33 +221,40 @@ function conferenceActions(action, state) {
             case 'alex4':
             newState = Object.assign(newState, {
                 dialog: '[Alexandria Epicron]- "Well I am his Ex. Wife! He cheated me out of so many things that I expect to be compensated greatly for all my horrid time with him." ',
-                choices: ['Why did you have such a bad time with him?', ''],
-                actions: ['', ''],
+                choices: ['Why did you have such a bad time with him?'],
+                actions: ['conference.alex8'],
             });
             break;
             case 'alex5':
             newState = Object.assign(newState, {
                 dialog: '[Alexandria Epicron]- "Just kidding, I don\'t have any friends. I just want to know if he\'s included me in his will or not!"',
-                choices: ['Why do you want to know that?', ''],
+                choices: ['Why do you want to know that?', ],
                 actions: ['conference.alex4'],
             });
             case 'alex6':
             newState = Object.assign(newState, {
                 dialog: '[Alexandria Epicron]- "Well I was married to him for 6 years! I knew that man better than anyone! Plus I know who did it! It was his very son, Ben! He\'s the spawn of satan I tell you! Never trust that little brat!" ',
-                choices: ['', ''],
-                actions: ['', ''],
+                choices: ['Are you OK?', ''],
+                actions: ['conference.alex9', ''],
             });
             case 'alex7':
             newState = Object.assign(newState, {
-                dialog: '[Alexandria Epicron]- ""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Alexandria Epicron]- "Oh heavens no! Don\'t get me wrong, I would have in a heartbeat! Too bad I don\'t want to spend the rest of my days in a jail cell while that fool laughs up from me from 6 feet under! He would have the final laugh then."',
+                choices: ['Are you Ok?', ''],
+                actions: ['conference.alex9', ''],
             });
-            case 'alex':
+            case 'alex8':
             newState = Object.assign(newState, {
-                dialog: '[Alexandria Epicron]- ',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Alexandria Epicron]- "He was just such a fool! He kept on criticizing me every time I bought something! "We Don\'t Have The Money" Suuure bud. Plus he has the nerve to get a divorce from me and somehow manages to get full rights of our son! I just had to pick him up from his elementary school when I heard you wanted everyone here. Such a fool. Didn\'t even account for his own death! "',
+                choices: ['Are you sane?', ''],
+                actions: ['conference.alex9', ''],
+            });
+            break;
+            case 'alex9':
+            newState = Object.assign(newState, {
+                dialog: '[Alexandria Epicron]- "Am I ok? AM I OK? I HAVE NEVER HAD SOMEONE ASK ME SUCH A STUPID QUESTION IN MY ENTIRE LIFE! Besides John of course. But you have the nerrrrve to call me insane! Good day to you sir!"',
+                choices: ['Return to dave', ''],
+                actions: ['conference.invfin', ''],
             });
             break;
         case 'ben':
@@ -248,6 +262,13 @@ function conferenceActions(action, state) {
                 dialog: '[Benjamin Stalwart]- "Have you seen my daddy?"',
                 choices: ['', ''],
                 actions: ['', ''],
+            });
+            break;
+            case 'done':  
+               newState = Object.assign(newState, {
+                dialog: 'Dave Watson] -"Done investigating already? Well, I guess you better get yourself out to the hallways! Each hallway connects to 2 offices and a farther stretch of the hallway. Good luck looking for clues! Also, I\'m going to send those employees back to their offices, so you can talk to them a bit more there. I\'ll be in the office if you need me."',
+                choices: ['Continue to the Hallway', ''],
+                actions: ['hallway.confent', ''],
             });
             break;
     }
