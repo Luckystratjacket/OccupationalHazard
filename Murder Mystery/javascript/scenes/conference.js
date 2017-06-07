@@ -190,23 +190,62 @@ function conferenceActions(action, state) {
                 actions: ['conference.inv', ''],
             });
             break;
-            case 'meg10':
+        case 'alex':
             newState = Object.assign(newState, {
-                dialog: '[Meghan McWaters]-""',
-                choices: ['', ''],
+                dialog: '[Alexandria Epicron]- "Oh! Nice to meet you. Your\'e here to investigate the murder of John, right?" ',
+                choices: ['Yes', 'No'],
+                actions: ['conference.alex2', 'conference.alex3'],
+            });
+            break;
+            case 'alex2':
+            newState = Object.assign(newState, {
+                dialog: '[Alexandria Epicron]- "Oh great! Once you get all of this mess sorted out, could you tell me if I\'m included in his will? Asking for a friend." ',
+                choices: ['Why would you want to know that?', 'Who Is this friend?'],
+                actions: ['conference.alex4', 'conference.alex5'],
+            });
+            break;
+            case 'alex3':
+            newState = Object.assign(newState, {
+                dialog: '[Alexandria Epicron]- "Oh. Well It\'s not like you really need an investigator to figure out who murdered him!" ',
+                choices: ['Why would you say that?', 'Did you murder him?'],
+                actions: ['conference.alex6', 'conference.alex7'],
+            });
+            break;
+            case 'alex4':
+            newState = Object.assign(newState, {
+                dialog: '[Alexandria Epicron]- "Well I am his Ex. Wife! He cheated me out of so many things that I expect to be compensated greatly for all my horrid time with him." ',
+                choices: ['Why did you have such a bad time with him?', ''],
                 actions: ['', ''],
             });
             break;
-        case 'alex':
+            case 'alex5':
             newState = Object.assign(newState, {
-                dialog: '',
+                dialog: '[Alexandria Epicron]- "Just kidding, I don\'t have any friends. I just want to know if he\'s included me in his will or not!"',
+                choices: ['Why do you want to know that?', ''],
+                actions: ['conference.alex4'],
+            });
+            case 'alex6':
+            newState = Object.assign(newState, {
+                dialog: '[Alexandria Epicron]- "Well I was married to him for 6 years! I knew that man better than anyone! Plus I know who did it! It was his very son, Ben! He\'s the spawn of satan I tell you! Never trust that little brat!" ',
+                choices: ['', ''],
+                actions: ['', ''],
+            });
+            case 'alex7':
+            newState = Object.assign(newState, {
+                dialog: '[Alexandria Epicron]- ""',
+                choices: ['', ''],
+                actions: ['', ''],
+            });
+            case 'alex':
+            newState = Object.assign(newState, {
+                dialog: '[Alexandria Epicron]- ',
                 choices: ['', ''],
                 actions: ['', ''],
             });
             break;
         case 'ben':
             newState = Object.assign(newState, {
-                dialog: '',
+                dialog: '[Benjamin Stalwart]- "Have you seen my daddy?"',
                 choices: ['', ''],
                 actions: ['', ''],
             });
