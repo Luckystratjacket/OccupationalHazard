@@ -6,6 +6,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Welcome to our top office. All our employees are in the conference room, so let me go ahead and introduce you to them."',
                 choices: ['Proceed to the conference room with Dave', 'Look around first'],
                 actions: ['conference.inv', 'conference.snoprud'],
+                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
             });
             break;
         case 'ent':
@@ -13,6 +14,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Welcome to our top Office! All our employees are in the conference room, so let me go ahead and introduce you to them!"',
                 choices: ['Proceed to the conference room with Dave', 'Look around first'],
                 actions: ['conference.inv2', 'conference.snop'],
+                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
             });
             break;
         case 'snop':
@@ -34,6 +36,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Well I should probably tell you a bit about your case. John was killed yesterday, and we stumbled upon his body earlier today."',
                 choices: ['Continue with Dave', ''],
                 actions: ['conference.inv', ''],
+                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
             });
             break;
         case 'inv':
@@ -41,6 +44,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Welcome to our conference room! These are my marvelous employees,and youre here to investigate which one of em killed another one of my employees! Who do you want to talk to first?',
                 choices: ['Steve', 'Meg', 'Alexandra', 'Benny'],
                 actions: ['conference.steve', 'conference.meg', 'conference.alex', 'conference.ben'],
+                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
             });
             break;
         case 'invwsteve':
@@ -48,6 +52,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Welcome to our conference room! These are my marvelous employees,and youre here to investigate which one of em killed another one of my employees! Who do you want to talk to first?',
                 choices: ['Meg', 'Alexandra', 'Benny'],
                 actions: ['conference.meg', 'conference.alex', 'conference.ben'],
+                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve':

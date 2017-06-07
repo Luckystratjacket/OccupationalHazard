@@ -86,6 +86,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] -"Oh that? It\'s nothing. Just corporate showing that big, ugly unfeeling soul of theirs again! Although I am getting promoted next week to District manager, so that\'ll be a change of pace. It\'s offsite and everything. Hey look, we\'re here!"',
                 choices: ['Exit the elevator into the conference room', ''],
                 actions: ['conference.rudent', ''],
+                background: [{ url: './img/elevator3.png', width: '100%', height: '100%' }],
             });
 
 
@@ -95,6 +96,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] -"Well, We\'re very far out from all the other branches. Usually we have a company detective come out, but your employers come highly reccomended. This your first case?"',
                 choices: ['Yes', 'No, I have actually solved this case before. I know all about your dirty little secrets.'],
                 actions: ['officelot.dia7', 'officelot.dia8'],
+                background: [{ url: './img/elevator2.png', width: '100%', height: '100%' }],
             });
 
 
@@ -104,6 +106,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] -"Oh. Well at least the new guys seem qualified!"',
                 choices: ['Exit the elevator into the conference room', ''],
                 actions: ['conference.ent', ''],
+                background: [{ url: './img/elevator3.png', width: '100%', height: '100%' }],
             });
 
 
@@ -113,6 +116,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] -"Huh. Well hopefully that lets you solve the case easier." *Nervous Laughter*',
                 choices: ['Exit the elevator into the conference room', ''],
                 actions: ['conference.rudent', ''],
+                background: [{ url: './img/elevator3.png', width: '100%', height: '100%' }],
             });
 
 
