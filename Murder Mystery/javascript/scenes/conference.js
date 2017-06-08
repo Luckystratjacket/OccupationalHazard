@@ -278,6 +278,7 @@ function conferenceActions(action, state) {
                 dialog: '[Benjamin Stalwart]- "Have you seen my daddy?"',
                 choices: ['Return to Dave', ''],
                 actions: ['conference.inv', ''],
+                background: [{ url: './img/conferRoom_BENNY.png', width: '100%', height: '100%' }],
             });
             break;
             case 'done':  
