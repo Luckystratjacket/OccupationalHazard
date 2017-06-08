@@ -86,7 +86,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] -"Ha. Ha. We\'re here."',
                 choices: ['Exit the elevator into the conference room', ''],
                 actions: ['conference.rudent', ''],
-                background: [{ url: './img/elevator3.png', width: '100%', height: '100%' }],
+                background: [{ url: './img/elevator3_WATSON_NORMAL.png', width: '100%', height: '100%' }],
             });
 
 
