@@ -6,7 +6,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Welcome to our top office. All our employees are in the conference room, so let me go ahead and introduce you to them."',
                 choices: ['Proceed to the conference room with Dave', 'Look around first'],
                 actions: ['conference.inv', 'conference.snoprud'],
-                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
+                background: [{ url: './img/hallway_0.png', width: '100%', height: '100%' }],
             });
             break;
         case 'ent':
@@ -83,6 +83,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Oh hey there. Cat got your tongue? "',
                 choices: ['No. What do you know about the murder that happened here?', '...'],
                 actions: ['conference.steve6', 'conference.steve7'],
+                background: [{ url: './img/conferRoom_STEVE_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve4':
@@ -90,6 +91,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Well considering my bed is against a wall and I didnt fall down 20 stories when I woke up, I can say I definitely did not wake up on the wrong side. But I did stumble upon a dead body at work today so I guess that might be a catalyst to my current state of mind."',
                 choices: ['No need to get snarky with me, Steve. Just trying to do my job.', 'Oh, I\'m so sorry. I didn\'t realize you were the first person to see the body.'],
                 actions: ['conference.steve8', 'conference.steve9'],
+                background: [{ url: './img/conferRoom_STEVE_ANGRY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve5':
