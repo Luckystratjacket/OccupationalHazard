@@ -159,7 +159,7 @@ function conferenceActions(action, state) {
             break;
         case 'meg31':
             newState = Object.assign(newState, {
-                dialog: '[Meghan McWaters]-"Uhm.. Let\'s see... I know Steve had a kid. And Isn\'t that his Ex. standing right over there? I think her name was Alexandria or something like that."',
+                dialog: '[Meghan McWaters]-"Uhm.. Let\'s see... I know John had a kid. And Isn\'t that his Ex. standing right over there? I think her name was Alexandria or something like that."',
                 choices: ['Is that all you know about John?', 'Were you and John close?'],
                 actions: ['conference.meg41', 'conference.meg5'],
             });
