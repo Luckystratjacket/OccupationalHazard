@@ -141,6 +141,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Oh hi there! Nice to meet you! My name\'s Meghan, but people just call me Meg."',
                 choices: ['Nice to meet you Meg!', 'What do you know about John?'],
                 actions: ['conference.meg2', 'conference.meg3'],
+                background: [{ url: './img/conferRoom_MEGHAN_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg2':
@@ -148,6 +149,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Wow! Usually I would expect a detective to just get right down to those questions, but you actually seem nice! Now go ahead and pick my brain with the questions I know you\'re dying to ask!"',
                 choices: ['What do you know about John?', 'Were you and John close?'],
                 actions: ['conference.meg31', 'conference.meg5'],
+                background: [{ url: './img/conferRoom_MEGHAN_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg3':
@@ -155,6 +157,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Uhm.. Let\'s see... I know Steve had a kid. And Isn\'t that his Ex. standing right over there? I think her name was Alexandria or something like that."',
                 choices: ['Is that all you know about John?', 'Were you and John close?'],
                 actions: ['conference.meg4', 'conference.meg5'],
+                background: [{ url: './img/conferRoom_MEGHAN_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg31':
@@ -162,6 +165,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Uhm.. Let\'s see... I know John had a kid. And Isn\'t that his Ex. standing right over there? I think her name was Alexandria or something like that."',
                 choices: ['Is that all you know about John?', 'Were you and John close?'],
                 actions: ['conference.meg41', 'conference.meg5'],
+                background: [{ url: './img/conferRoom_MEGHAN_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg4':
@@ -169,6 +173,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Yeah I\'m sorry, but yeah that\'s all I can think of right now"',
                 choices: ['Were you and John Close?', ''],
                 actions: ['conference.meg5', ''],
+                background: [{ url: './img/conferRoom_MEGHAN_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg41':
@@ -176,6 +181,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Actually, come to think of it, it is pretty suspicious that Steve had been gone the last 2 days before he showed up convieniently to John\'s dead body."',
                 choices: ['Were you and John Close?', 'What do you mean by that?'],
                 actions: ['conference.meg5', 'conference.meg6'],
+                background: [{ url: './img/conferRoom_MEGHAN_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg5':
@@ -183,6 +189,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Well, we were as close as 2 coworkers could be. I brought him coffee in the morning. Made it myself. Used to work as a Barista before I got this job. Shows you what a Bachelor\'s Degree in Chemistry can get you. Ha."',
                 choices: ['So you have a bachelors degree in Chemistry?', ''],
                 actions: ['conference.meg7', ''],
+                background: [{ url: './img/conferRoom_MEGHAN_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg6':
@@ -190,6 +197,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Well, Steve had just accumulated a few days of vacation last week and just burned them all. Im just sayin\' its kind of suspicious that he went convieniently on vacation right before he found him."',
                 choices: ['Were you and John Close?', ''],
                 actions: ['conference.meg5', ''],
+                background: [{ url: './img/conferRoom_MEGHAN_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg7':
@@ -197,6 +205,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Why yes I do! It\'s not like i use it here either! All I do is file paperwork. Should really consider doing the Walter White approach, but I\'m good."',
                 choices: ['Do you have any more comments?', 'Who do you think did it?'],
                 actions: ['conference.meg8', 'conference.meg9'],
+                background: [{ url: './img/conferRoom_MEGHAN_ANGRY.png', width: '100%', height: '100%' }],
             });
             break;
             case 'meg8':
@@ -204,6 +213,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Well not really. I do have my suspicions on who did it but that seems rather unprofessional to just say that I think. You should probably ask the other people some questions."',
                 choices: ['Return to Dave', ''],
                 actions: ['conference.invfin', ''],
+                background: [{ url: './img/conferRoom_MEGHAN_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
             case 'meg9':
@@ -211,6 +221,7 @@ function conferenceActions(action, state) {
                 dialog: '[Meghan McWaters]-"Well, to tell you the truth, I think its Unprofessional to accuse someone. I\'m sure I only know a little about the story, but right now I think Steve did it. I think you should ask some people more questions."',
                 choices: ['Return to Dave', ''],
                 actions: ['conference.invfin', ''],
+                background: [{ url: './img/conferRoom_MEGHAN_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'alex':
