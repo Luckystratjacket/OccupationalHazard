@@ -67,6 +67,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Hi, nice to meet you. Names Steve."',
                 choices: ['Nice to meet you too.', 'Uhhh... Hi?', 'Go back to Dave'],
                 actions: ['conference.steve2', 'conference.steve3', 'conference.inv'],
+                background: [{ url: './img/conferRoom_STEVE_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve2':
@@ -74,6 +75,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Well someone\'s cheery. Good to know that detectives wear a smile on their face when they investigate a murder. Bet it keeps you sane."',
                 choices: ['Well someone woke up on the wrong side of the bed this morning.', 'Haha! Who said I was sane?'],
                 actions: ['conference.steve4', 'conference.steve5'],
+                background: [{ url: './img/conferRoom_STEVE_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve3':
