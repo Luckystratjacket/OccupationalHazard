@@ -51,28 +51,31 @@ function processAction(action, state) {
         newState = officelotActions(actionIdentifier, state);
     }
     if (actionCategory == 'breakroom') {
-        newState = officelotActions(actionIdentifier, state);
+        newState = breakroomActions(actionIdentifier, state);
     }
     if (actionCategory == 'johnoffice') {
-        newState = officelotActions(actionIdentifier, state);
+        newState = johnofficeActions(actionIdentifier, state);
     }
     if (actionCategory == 'copierroom') {
-        newState = gameActions(actionIdentifier, state);
+        newState = copierroomActions(actionIdentifier, state);
     }
     if (actionCategory == 'daveoffice') {
-        newState = gameActions(actionIdentifier, state);
+        newState = daveofficeActions(actionIdentifier, state);
     }
     if (actionCategory == 'megoffice') {
-        newState = gameActions(actionIdentifier, state);
+        newState = megofficeActions(actionIdentifier, state);
     }
     if (actionCategory == 'steveoffice') {
-        newState = gameActions(actionIdentifier, state);
+        newState = steveofficeActions(actionIdentifier, state);
     }
     if (actionCategory == 'storageroom') {
-        newState = gameActions(actionIdentifier, state);
+        newState = storageroomActions(actionIdentifier, state);
     }
     if (actionCategory == 'hallway') {
-        newState = gameActions(actionIdentifier, state);
+        newState = hallwayActions(actionIdentifier, state);
+    }
+    if (actionCategory == 'hiddenroom') {
+        newState = hiddenroomActions(actionIdentifier, state);
     }
 
 
