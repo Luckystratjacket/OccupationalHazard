@@ -46,7 +46,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] - "So, ahh, welcome to Antrax! Due to security reasons, I do have to say that anything you see in our private testing facilities that does not directly relate to your case cannot be shared outside of this office. Move around all ya want, but if you find anything, just lemme know, Mkay?"',
                 choices: ['So are you hiding anything?', 'Why tell you?'],
                 actions: ['officelot.dia', 'officelot.dia2'],
-                background: [{ url: './img/elevator1.png', width: '100%', height: '100%' }],
+                background: [{ url: './img/elevator1_WATSON_HAPPY.png', width: '100%', height: '100%' }],
             });
 
 
