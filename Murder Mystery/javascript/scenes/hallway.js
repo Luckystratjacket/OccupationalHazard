@@ -43,6 +43,7 @@ function hallwayActions(action, state) {
                     dialog: 'The door is locked',
                     choices: ['Move back into the main hallway',''],
                     actions: ['hallway.ent4',''],
+                    background: [{ url: './img/door_no_key.png', width: '100%', height: '100%' }],
                 });
 
             } else {
@@ -50,6 +51,7 @@ function hallwayActions(action, state) {
                     dialog: 'The Door is locked. Do you want to try the key that you found?',
                     choices: ['Try the key','Exit back into the hallway'],
                     actions: ['hiddenroom.ent','hallway.ent4'],
+                    background: [{ url: './img/door_yes_key.png', width: '100%', height: '100%' }],
                 });
             }
             break;
