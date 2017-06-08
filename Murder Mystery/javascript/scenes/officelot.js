@@ -56,7 +56,7 @@ function officelotActions(action, state) {
                 dialog: '[Dave Watson] - "Huh? No, Im not hiding anything! But Im sure we all have our personal lives, and some us want them to remain personal. Just don\'t ask too many questions you don\'t need to ask."',
                 choices: ['Oh. That makes sense.', 'That sounds like someone who\'s hiding something would say.'],
                 actions: ['officelot.dia3', 'officelot.dia4'],
-                background: [{ url: './img/elevator2.png', width: '100%', height: '100%' }],
+                background: [{ url: './img/elevator2_WATSON_NORMAL.png', width: '100%', height: '100%' }],
             });
 
 
