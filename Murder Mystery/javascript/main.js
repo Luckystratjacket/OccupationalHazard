@@ -57,7 +57,7 @@ function processAction(action, state) {
         newState = johnofficeActions(actionIdentifier, state);
     }
     if (actionCategory == 'copierroom') {
-        newState = copierroomActions(actionIdentifier, state);
+        newState = copierRoomActions(actionIdentifier, state);
     }
     if (actionCategory == 'daveoffice') {
         newState = daveofficeActions(actionIdentifier, state);

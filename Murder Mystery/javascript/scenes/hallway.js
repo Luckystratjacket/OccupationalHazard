@@ -4,7 +4,7 @@ function hallwayActions(action, state) {
         case 'confent':  
                newState = Object.assign(newState, {
                 dialog: 'You can see 2 offices on either side of you. The hallway continues forward in front of you.',
-                choices: ['John\'s office is on your left. It is empty.', 'Steve\'s office is to your left. You can hear a quiet sobbing from inside.', 'The hallway ahead of you leads to more rooms.'],
+                choices: ['John\'s office is on your right. It is empty.', 'Steve\'s office is to your left. You can hear a quiet sobbing from inside.', 'The hallway ahead of you leads to more rooms.'],
                 actions: ['johnoffice.ent', 'steveoffice.ent', 'hallway.ent2'],
             });
             break;
