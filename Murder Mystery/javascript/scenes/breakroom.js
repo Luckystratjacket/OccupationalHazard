@@ -45,23 +45,23 @@ function breakroomActions(action, state) {
             break;
             case 'dia5':  
                newState = Object.assign(newState, {
-                dialog: '[Benny] -""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Benny] -"You know! Where is he?"',
+                choices: ['I dont know how to tell you this, and it\'s never good to hear, but your dad is dead Benny.', 'I Don\'t actually know where he is.'],
+                actions: ['breakroom.dia7', 'breakroom.dia4'],
             });
             break;
             case 'dia6':  
                newState = Object.assign(newState, {
                 dialog: '[Benny] -"Thanks Mister! Good luck with whatever you\'re doing."',
-                choices: ['Exit into the hallway', ''],
-                actions: ['', ''],
+                choices: ['Exit into the hallway', ],
+                actions: ['hallway.ent3'],
             });
             break;
-            case 'dia':  
+            case 'dia7':  
                newState = Object.assign(newState, {
-                dialog: '[Benny] -""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Benny] -"I know you\'re joking. Let me know when you know where he is, OK?" *Benny looks back into the corner, looking sad.*',
+                choices: ['Exit into the hallway'],
+                actions: ['hallway.ent3'],
             });
             break;
     }
