@@ -14,7 +14,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Welcome to our top Office! All our employees are in the conference room, so let me go ahead and introduce you to them!"',
                 choices: ['Proceed to the conference room with Dave', 'Look around first'],
                 actions: ['conference.inv2', 'conference.snop'],
-                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
+                background: [{ url: './img/hallway_0.png', width: '100%', height: '100%' }],
             });
             break;
         case 'snop':
@@ -22,6 +22,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Oh, you wanna look around first, huh? I think it might be a better idea if you went back and talked to the emplyees..."',
                 choices: ['Continue looking around', 'Return to the conference room'],
                 actions: ['conference.snoprud', 'conference.inv2'],
+                background: [{ url: './img/hallway_0.png', width: '100%', height: '100%' }],
             });
             break;
         case 'snoprud':
@@ -29,6 +30,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Well, fine. Feel free to look around then. You should probably introduce yourself first to the people in there, but hey, but hey, who am I to know how things work here? I\'m only the boss!"',
                 choices: ['Contiue looking around', 'Go into the conference room and meet the staff'],
                 actions: ['hallway.confent', 'conference.inv2'],
+                background: [{ url: './img/hallway_0.png', width: '100%', height: '100%' }],
             });
             break;
         case 'inv2':
@@ -99,6 +101,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Well no one did. I would assume that the person that my boss hired was at least semi-competent in their job. Thanks for killing those hopes." *Steve leaves out the back*',
                 choices: ['Return to Dave'],
                 actions: ['conference.invwsteve'],
+                background: [{ url: './img/conferRoom_STEVE_ANGRY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve6':
@@ -106,6 +109,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Direct and to the point. I like your drive. I found the body of my coworker when I came in this morning. Serves me right for coming in early. I\'ve been stuck in this office all morning, and can\'t get that image out of my head. Oh gosh. Poor John. Excuse me" *Steve leaves*',
                 choices: ['Return to Dave'],
                 actions: ['conference.invwsteve'],
+                background: [{ url: './img/conferRoom_STEVE_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve7':
@@ -113,6 +117,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Huh. You must really be mute. I\'ll be here if you ever decide to talk to anyone ever again."',
                 choices: ['Return to Dave',],
                 actions: ['conference.invfin',],
+                background: [{ url: './img/conferRoom_STEVE_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve8':
@@ -120,6 +125,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Ooh Im\'m so sorry. I didn\'t mean to hurt your sensitive feelings. Well if you have to know, I was the one that found your victom\'s body. He was sprawled out on his desk like some sort of ragdoll that a child just discarded. Horrible scene. Ugh. Just thinking about it gives me flashbacks. Please excuse me." *Steve Leaves*',
                 choices: ['Return to Dave',],
                 actions: ['conference.invwsteve', ''],
+                background: [{ url: './img/conferRoom_STEVE_ANGRY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'steve9':
@@ -127,6 +133,7 @@ function conferenceActions(action, state) {
                 dialog: '[Steven Avocanda] - "Its fine. Many people can sometimes be a bit brash and arrogant, like you when they dont know the full story.  But even thinking about that body.. Ugh. PLease excuse me." *Steve Leaves*',
                 choices: ['Return to Dave', ''],
                 actions: ['conference.invwsteve', 'conference.'],
+                background: [{ url: './img/conferRoom_STEVE_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'meg':
