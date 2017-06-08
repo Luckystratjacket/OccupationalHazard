@@ -265,13 +265,13 @@ function conferenceActions(action, state) {
         case 'ben':
             newState = Object.assign(newState, {
                 dialog: '[Benjamin Stalwart]- "Have you seen my daddy?"',
-                choices: ['', ''],
-                actions: ['', ''],
+                choices: ['Return to Dave', ''],
+                actions: ['conference.inv', ''],
             });
             break;
             case 'done':  
                newState = Object.assign(newState, {
-                dialog: 'Dave Watson] -"Done investigating already? Well, I guess you better get yourself out to the hallways! Each hallway connects to 2 offices and a farther stretch of the hallway. Good luck looking for clues! Also, I\'m going to send those employees back to their offices, so you can talk to them a bit more there. I\'ll be in the office if you need me."',
+                dialog: 'Dave Watson] -"Done talking to everyone already? Well, I guess you better get yourself out to the hallways! Each hallway connects to 2 offices and a farther stretch of the hallway. Good luck looking for clues! Also, I\'m going to send those employees back to their offices, so you can talk to them a bit more there. I\'ll be in the office if you need me."',
                 choices: ['Continue to the Hallway', ''],
                 actions: ['hallway.confent', ''],
             });
