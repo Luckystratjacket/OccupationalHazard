@@ -122,12 +122,7 @@ function daveofficeActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson]-"Oh you looked in that office. Find anything good in there?"',
                 choices: ['Alex was in there.', 'Nope, nothing of interest'],
-<<<<<<< HEAD
-                actions: ['', 'daveoffice.ent2'],
-                background: [{ url: './img/watsonOffice_WATSON_NORMAL.png', width: '100%', height: '100%' }
-=======
                 actions: ['daveoffice.jo2', 'daveoffice.ent2'],
->>>>>>> 0eab861fe638db988acfafb35dc2799ef65227d1
             });
             break;
         case 'jo2':
