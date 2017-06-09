@@ -15,7 +15,7 @@ function officelotActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] - "Oh hey did the parking lot just give you one of those mind numbing headaches again? I just attribute that to stress! Ha!" ',
                 choices: ['Continue following Dave', ''],
-                actions: ['officelot.ETO1', ''],
+                actions: ['officelot.ETO', ''],
                 background: [{ url: './img/officeLobby_WATSON_HAPPY.png', width: '100%', height: '100%' }],
             });
 
