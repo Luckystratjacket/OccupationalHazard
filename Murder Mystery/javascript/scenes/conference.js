@@ -229,6 +229,8 @@ function conferenceActions(action, state) {
                 dialog: '[Alexandria Epicron]- "Oh! Nice to meet you. Your\'e here to investigate the murder of John, right?" ',
                 choices: ['Yes', 'No'],
                 actions: ['conference.alex2', 'conference.alex3'],
+                background: [{ url: './img/conferRoom_ALEXANDRA_HAPPY.png', width: '100%', height: '100%' }],
+
             });
             break;
             case 'alex2':
@@ -236,6 +238,7 @@ function conferenceActions(action, state) {
                 dialog: '[Alexandria Epicron]- "Oh great! Once you get all of this mess sorted out, could you tell me if I\'m included in his will? Asking for a friend." ',
                 choices: ['Why would you want to know that?', 'Who Is this friend?'],
                 actions: ['conference.alex4', 'conference.alex5'],
+                background: [{ url: './img/conferRoom_ALEXANDRA_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
             case 'alex3':
@@ -243,6 +246,7 @@ function conferenceActions(action, state) {
                 dialog: '[Alexandria Epicron]- "Oh. Well It\'s not like you really need an investigator to figure out who murdered him!" ',
                 choices: ['Why would you say that?', 'Did you murder him?'],
                 actions: ['conference.alex6', 'conference.alex7'],
+                background: [{ url: './img/conferRoom_ALEXANDRA_ANGRY.png', width: '100%', height: '100%' }],
             });
             break;
             case 'alex4':
@@ -250,6 +254,7 @@ function conferenceActions(action, state) {
                 dialog: '[Alexandria Epicron]- "Well I am his Ex. Wife! He cheated me out of so many things that I expect to be compensated greatly for all my horrid time with him." ',
                 choices: ['Why did you have such a bad time with him?'],
                 actions: ['conference.alex8'],
+                background: [{ url: './img/conferRoom_ALEXANDRA_ANGRY.png', width: '100%', height: '100%' }],
             });
             break;
             case 'alex5':
@@ -257,24 +262,28 @@ function conferenceActions(action, state) {
                 dialog: '[Alexandria Epicron]- "Just kidding, I don\'t have any friends. I just want to know if he\'s included me in his will or not!"',
                 choices: ['Why do you want to know that?', ],
                 actions: ['conference.alex4'],
+                background: [{ url: './img/conferRoom_ALEXANDRA_NORMAL.png', width: '100%', height: '100%' }],
             });
             case 'alex6':
             newState = Object.assign(newState, {
                 dialog: '[Alexandria Epicron]- "Well I was married to him for 6 years! I knew that man better than anyone! Plus I know who did it! It was his very son, Ben! He\'s the spawn of satan I tell you! Never trust that little brat!" ',
                 choices: ['Are you OK?', ''],
                 actions: ['conference.alex9', ''],
+                background: [{ url: './img/conferRoom_ALEXANDRA_ANGRY.png', width: '100%', height: '100%' }],
             });
             case 'alex7':
             newState = Object.assign(newState, {
                 dialog: '[Alexandria Epicron]- "Oh heavens no! Don\'t get me wrong, I would have in a heartbeat! Too bad I don\'t want to spend the rest of my days in a jail cell while that fool laughs up from me from 6 feet under! He would have the final laugh then."',
                 choices: ['Are you Ok?', ''],
                 actions: ['conference.alex9', ''],
+                background: [{ url: './img/conferRoom_ALEXANDRA_ANGRY.png', width: '100%', height: '100%' }],
             });
             case 'alex8':
             newState = Object.assign(newState, {
                 dialog: '[Alexandria Epicron]- "He was just such a fool! He kept on criticizing me every time I bought something! "We Don\'t Have The Money" Suuure bud. Plus he has the nerve to get a divorce from me and somehow manages to get full rights of our son! I just had to pick him up from his elementary school when I heard you wanted everyone here. Such a fool. Didn\'t even account for his own death! "',
                 choices: ['Are you sane?', ''],
                 actions: ['conference.alex9', ''],
+                background: [{ url: './img/conferRoom_ALEXANDRA_ANGRY.png', width: '100%', height: '100%' }],
             });
             break;
             case 'alex9':
@@ -282,6 +291,7 @@ function conferenceActions(action, state) {
                 dialog: '[Alexandria Epicron]- "Am I ok? AM I OK? I HAVE NEVER HAD SOMEONE ASK ME SUCH A STUPID QUESTION IN MY ENTIRE LIFE! Besides John of course. But you have the nerrrrve to call me insane! Good day to you sir!"',
                 choices: ['Return to dave', ''],
                 actions: ['conference.invfin', ''],
+                background: [{ url: './img/conferRoom_ALEXANDRA_RAGE.png', width: '100%', height: '100%' }],
             });
             break;
         case 'ben':
@@ -297,6 +307,7 @@ function conferenceActions(action, state) {
                 dialog: 'Dave Watson] -"Done talking to everyone already? Well, I guess you better get yourself out to the hallways! Each hallway connects to 2 offices and a farther stretch of the hallway. Good luck looking for clues! Also, I\'m going to send those employees back to their offices, so you can talk to them a bit more there. I\'ll be in the office if you need me."',
                 choices: ['Continue to the Hallway', ''],
                 actions: ['hallway.confent', ''],
+                background: [{ url: './img/conferRoom_WATSON_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
     }
