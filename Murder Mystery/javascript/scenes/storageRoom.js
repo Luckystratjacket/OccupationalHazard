@@ -1,11 +1,11 @@
 function storageroomActions(action, state) {
     var newState = state;
     switch (action) {
-        case '':  
+        case 'ent':  
                newState = Object.assign(newState, {
-                dialog: '',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: 'You enter the Storage Room. All you see is large boxes surrounding you. You cannot even move an inch.',
+                choices: ['Exit into the Hallway', ''],
+                actions: ['hallway.ent2', ''],
             });
             
 
