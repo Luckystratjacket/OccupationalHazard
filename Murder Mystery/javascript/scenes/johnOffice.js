@@ -25,29 +25,29 @@ function johnofficeActions(action, state) {
         case 'dia3':
             newState = Object.assign(newState, {
                 dialog: '[Alexandria Epicron]-"Doesn\'t look like it. Have you seen anything that looks suspicious around here? I know thats usually your job, but I just need to get some sort of idea on if I can get Benny. His grandparents are monsters and I don\'t want him entering the foster system either!"',
-                choices: ['Nope', ''],
-                actions: ['', ''],
+                choices: ['Nope', 'What\'s that red stain on the ground?'],
+                actions: ['johnoffice.dia5', 'johnoffice.dia6'],
             });
             break;
         case 'dia4':
             newState = Object.assign(newState, {
                 dialog: '[Alexandria Epicron]-"Have you seen anything that looks suspicious around here? I know thats usually your job, but I just need to get some sort of idea on if I can get Benny. His grandparents are monsters and I don\'t want him entering the foster system either!"',
-                choices: ['', ''],
+                choices: ['No, Sorry.', 'What\'s that red stain on the ground?'],
                 actions: ['', ''],
             });
             break;
         case 'dia5':
             newState = Object.assign(newState, {
-                dialog: '[Alexandria Epicron]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Alexandria Epicron]-"Oh. Well that sucks! If you find anything lying around, just let me know."',
+                choices: ['Ok'],
+                actions: ['hallway.confent'],
             });
             break;
         case 'dia6':
             newState = Object.assign(newState, {
-                dialog: '[Alexandria Epicron]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Alexandria Epicron]-"Oh that? I accidentially dropped a glass of wine on the ground when I came back in. The janitor should come and clean that up."',
+                choices: ['I havent actually seen a janitor anywhere', ''],
+                actions: ['johnoffice.dia5', ''],
             });
             break;
     }
