@@ -6,6 +6,7 @@ function daveofficeActions(action, state) {
                 dialog: '[Dave Watson] - "Welcome! Did you find anything of interest?"',
                 choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
                 actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
+                background: [{ url: './img/watsonOffice_WATSON_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'ent2':
@@ -13,6 +14,7 @@ function daveofficeActions(action, state) {
                 dialog: '[Dave Watson] - "Well, did you find anything else?"',
                 choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
                 actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
+                background: [{ url: './img/watsonOffice_WATSON_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
             case 'ent3':
@@ -20,6 +22,7 @@ function daveofficeActions(action, state) {
                 dialog: '[Dave Watson] - "Well, did you find anything else?"',
                 choices: ['Who do you think killed John?','I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
                 actions: ['daveoffice.res','daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
+                background: [{ url: './img/watsonOffice_WATSON_NORMAL.png', width: '100%', height: '100%' }],
             });
             break;
         case 'br':
