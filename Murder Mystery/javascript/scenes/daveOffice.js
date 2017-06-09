@@ -4,17 +4,34 @@ function daveofficeActions(action, state) {
         case 'ent':
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] - "Welcome! Did you find anything of interest?"',
+<<<<<<< HEAD
                 choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated Meg\'s office', 'I investigated Steve\'s office'],
                 actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.mo', 'daveoffice.so', ],
                 background: [{ url: './img/watsonOffice_WATSON_HAPPY.png', width: '100%', height: '100%' }],
+=======
+                choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
+                actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
+>>>>>>> 0eab861fe638db988acfafb35dc2799ef65227d1
             });
             break;
         case 'ent2':
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] - "Well, did you find anything else?"',
+<<<<<<< HEAD
                 choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I Investigated John\'s Office', 'I investigated Meg\'s office', 'I investigated Steve\'s office', 'I investigated the storage room.'],
                 actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'daveoffice.mo', 'daveoffice.so', 'daveoffice.sr'],
                 background: [{ url: './img/watsonOffice_WATSON_NORMAL.png', width: '100%', height: '100%' }],
+=======
+                choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
+                actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
+            });
+            break;
+            case 'ent3':
+            newState = Object.assign(newState, {
+                dialog: '[Dave Watson] - "Well, did you find anything else?"',
+                choices: ['Who do you think killed John?','I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
+                actions: ['daveoffice.res','daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
+>>>>>>> 0eab861fe638db988acfafb35dc2799ef65227d1
             });
             break;
         case 'br':
@@ -117,64 +134,75 @@ function daveofficeActions(action, state) {
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson]-"Oh you looked in that office. Find anything good in there?"',
                 choices: ['Alex was in there.', 'Nope, nothing of interest'],
+<<<<<<< HEAD
                 actions: ['', 'daveoffice.ent2'],
                 background: [{ url: './img/watsonOffice_WATSON_NORMAL.png', width: '100%', height: '100%' }
+=======
+                actions: ['daveoffice.jo2', 'daveoffice.ent2'],
+>>>>>>> 0eab861fe638db988acfafb35dc2799ef65227d1
             });
             break;
-        case 'jo':
+        case 'jo2':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Dave Watson]-"Oh really? Please tell me she was not removing company property! We had to escort her off the premises once because of that!"',
+                choices: ['She wasn\'t touching anything too important. ', 'I know that she rummaged around his desk'],
+                actions: ['daveoffice.jo3', 'daveoffice.jo3'],
             });
             break;
-        case 'jo':
+        case 'jo3':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Dave Watson]-"Oh you\'re joking. What did she touch?"',
+                choices: ['She brought out a check from his desk and it was from you, adressed to him.', 'She was looking around for stuff that was from their home. She was looking for something that was from their old house'],
+                actions: ['daveoffice.jo5', 'daveoffice.jo8'],
             });
             break;
-        case 'jo':
+        case 'jo5':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Dave Watson]-"Whaaaa? There\'s no way thats real. I promise he wasn\'t blackmailing me or anything."',
+                choices: ['That sounds awfully suspicious.', 'How do you explain the check?'],
+                actions: ['daveoffice.jo6', 'daveoffice.jo6'],
             });
             break;
-        case 'jo':
+        case 'jo6':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Dave Watson]-"Wait wait, I can explain! The check was a bonus! It was a bonus... For good work! Yeah. Good work."',
+                choices: ['Ok...', 'Sounds suspicious to me.'],
+                actions: ['daveoffice.jo7', 'daveoffice.jo7'],
             });
             break;
-        case 'jo':
+        case 'jo7':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Dave Watson]-"No no I swear it\'s only that! Holiday bonus. Yeah... Well, end of that conversation."',
+                choices: ['Well Ok.', ''],
+                actions: ['daveoffice.ent3', ''],
             });
             break;
-        case 'mo':
+        case 'jo8':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Dave Watson]-"Well then. Would be a shame to have to escort her off the property again."',
+                choices: ['Yes, that would be a shame.', 'Why is she even here?'],
+                actions: ['daveoffice.jo9', 'daveoffice.jo10'],
             });
             break;
-        case 'so':
+        case 'jo9':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Dave Watson]-"Yes, it would be. Got anything else to talk about?"',
+                choices: ['Nope', ''],
+                actions: ['daveoffice.ent3', ''],
             });
             break;
-        case 'sr':
+        case 'jo10':
             newState = Object.assign(newState, {
-                dialog: '[Dave Watson]-""',
-                choices: ['', ''],
-                actions: ['', ''],
+                dialog: '[Dave Watson]-"To be honest, I have no clue. She just kinda shows up. We had her sign a NDA that lasts permanently (Sucker), and she comes in to heckle john from time to time. I even got her a security badge! She\'s welcome here."',
+                choices: ['Oh.'],
+                actions: ['daveoffice.ent3'],
+            });
+            break;
+        case 'res':
+            newState = Object.assign(newState, {
+                dialog: '[Dave Watson]-"I think that Alexas did it. She has more motive than anybody as far as I know. She also said she hates yogurt, so she has that going against her already."',
+                choices: ['Ok.', ''],
+                actions: ['daveoffice.ent2', ''],
             });
             break;
     }
