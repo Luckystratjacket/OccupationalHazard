@@ -38,7 +38,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Well I should probably tell you a bit about your case. John was killed yesterday, and we stumbled upon his body earlier today. I called forward everyone that has "',
                 choices: ['Continue with Dave', ''],
                 actions: ['conference.inv', ''],
-                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
+                background: [{ url: './img/conferRoom_WATSON_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'inv':
@@ -46,7 +46,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Welcome to our conference room! These are my marvelous employees,and youre here to investigate which one of em killed another one of my employees! Who do you want to talk to first?',
                 choices: ['Steve', 'Meg', 'Alexandra', 'Benny', ],
                 actions: ['conference.steve', 'conference.meg', 'conference.alex', 'conference.ben'],
-                background: [{ url: './img/conferRoom.png', width: '100%', height: '100%' }],
+                background: [{ url: './img/conferRoom_WATSON_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
             case 'invfin':
@@ -54,6 +54,7 @@ function conferenceActions(action, state) {
                 dialog: '[Dave Watson] -"Welcome to our conference room! These are my marvelous employees,and youre here to investigate which one of em killed another one of my employees! Who do you want to talk to first?',
                 choices: ['Steve', 'Meg', 'Alexandra', 'Benny', 'done with investigation'],
                 actions: ['conference.steve', 'conference.meg', 'conference.alex', 'conference.ben', 'conference.done'],
+                background: [{ url: './img/conferRoom_WATSON_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
         case 'invwsteve':
