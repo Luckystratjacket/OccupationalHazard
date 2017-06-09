@@ -6,6 +6,7 @@ function breakroomActions(action, state) {
                 dialog: 'You enter the breakroom. You can see Benny, John\'s son, in the corner crying.',
                 choices: ['Look around the break room for clues', 'Talk to Benny'],
                 actions: ['breakroom.inv', 'breakroom.dia'],
+                background: [{ url: './img/breakRoom.png', width: '100%', height: '100%' }],
             });
             break;
             case 'inv':  
@@ -13,6 +14,7 @@ function breakroomActions(action, state) {
                 dialog: 'You look around the breakroom. All you can find is an old yogurt that was suprisingly good. It had someone\'s name on it, but hey, Finders keepers.',
                 choices: ['Talk to Benny', 'Exit into the hallway'],
                 actions: ['breakroom.dia', 'hallway.ent3'],
+                background: [{ url: './img/breakRoom_YOGURT.png', width: '100%', height: '100%' }],
             });
             break;
             case 'dia':  
@@ -20,6 +22,7 @@ function breakroomActions(action, state) {
                 dialog: '[Benny] -"You never resonded to me about my question in the conference room."',
                 choices: ['Why are you crying?', 'What question?'],
                 actions: ['breakroom.dia2', 'breakroom.dia3'],
+                background: [{ url: './img/breakRoom_BENNY_SAD.png', width: '100%', height: '100%' }],
             });
             break;
             case 'dia2':  
@@ -27,6 +30,7 @@ function breakroomActions(action, state) {
                 dialog: '[Benny] -"I dont know where my dad is and no one will tell me. Do you know where my dad is?"',
                 choices: ['No', 'Yes'],
                 actions: ['breakroom.dia4', 'breakroom.dia5'],
+                background: [{ url: './img/breakRoom_BENNY_SAD.png', width: '100%', height: '100%' }],
             });
             break;
             case 'dia3':  
@@ -34,6 +38,7 @@ function breakroomActions(action, state) {
                 dialog: '[Benny] -"Do you know where my dad is?"',
                 choices: ['No', 'Yes'],
                 actions: ['breakroom.dia4', 'breakroom.dia5'],
+                background: [{ url: './img/breakRoom_BENNY_SAD.png', width: '100%', height: '100%' }],
             });
             break;
             case 'dia4':  
@@ -41,6 +46,7 @@ function breakroomActions(action, state) {
                 dialog: '[Benny] -"That\'s what they all say. He has to be somewhere. Aww. Tell me if you find him!"',
                 choices: ['Will do Benny!', ''],
                 actions: ['breakroom.dia6', ''],
+                background: [{ url: './img/breakRoom_BENNY_SAD.png', width: '100%', height: '100%' }],
             });
             break;
             case 'dia5':  
@@ -48,6 +54,7 @@ function breakroomActions(action, state) {
                 dialog: '[Benny] -"You know! Where is he?"',
                 choices: ['I dont know how to tell you this, and it\'s never good to hear, but your dad is dead Benny.', 'I Don\'t actually know where he is.'],
                 actions: ['breakroom.dia7', 'breakroom.dia4'],
+                background: [{ url: './img/breakRoom_BENNY_SAD.png', width: '100%', height: '100%' }],
             });
             break;
             case 'dia6':  
@@ -55,6 +62,7 @@ function breakroomActions(action, state) {
                 dialog: '[Benny] -"Thanks Mister! Good luck with whatever you\'re doing."',
                 choices: ['Exit into the hallway', ],
                 actions: ['hallway.ent3'],
+                background: [{ url: './img/breakRoom_BENNY_HAPPY.png', width: '100%', height: '100%' }],
             });
             break;
             case 'dia7':  
@@ -62,6 +70,7 @@ function breakroomActions(action, state) {
                 dialog: '[Benny] -"I know you\'re joking. Let me know when you know where he is, OK?" *Benny looks back into the corner, looking sad.*',
                 choices: ['Exit into the hallway'],
                 actions: ['hallway.ent3'],
+                background: [{ url: './img/breakRoom_BENNY_SAD.png', width: '100%', height: '100%' }],
             });
             break;
     }
