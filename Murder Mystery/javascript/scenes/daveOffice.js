@@ -4,24 +4,13 @@ function daveofficeActions(action, state) {
         case 'ent':
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] - "Welcome! Did you find anything of interest?"',
-<<<<<<< HEAD
-                choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated Meg\'s office', 'I investigated Steve\'s office'],
-                actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.mo', 'daveoffice.so', ],
-                background: [{ url: './img/watsonOffice_WATSON_HAPPY.png', width: '100%', height: '100%' }],
-=======
                 choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
                 actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
->>>>>>> 0eab861fe638db988acfafb35dc2799ef65227d1
             });
             break;
         case 'ent2':
             newState = Object.assign(newState, {
                 dialog: '[Dave Watson] - "Well, did you find anything else?"',
-<<<<<<< HEAD
-                choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I Investigated John\'s Office', 'I investigated Meg\'s office', 'I investigated Steve\'s office', 'I investigated the storage room.'],
-                actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'daveoffice.mo', 'daveoffice.so', 'daveoffice.sr'],
-                background: [{ url: './img/watsonOffice_WATSON_NORMAL.png', width: '100%', height: '100%' }],
-=======
                 choices: ['I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
                 actions: ['daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
             });
@@ -31,7 +20,6 @@ function daveofficeActions(action, state) {
                 dialog: '[Dave Watson] - "Well, did you find anything else?"',
                 choices: ['Who do you think killed John?','I investigated the Breakroom', 'I investigated the Copier room.', 'I investigated John\'s office', 'I need to look around more'],
                 actions: ['daveoffice.res','daveoffice.br', 'daveoffice.cr', 'daveoffice.jo', 'hallway.ent4', ],
->>>>>>> 0eab861fe638db988acfafb35dc2799ef65227d1
             });
             break;
         case 'br':
