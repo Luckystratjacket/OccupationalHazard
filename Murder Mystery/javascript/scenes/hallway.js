@@ -26,15 +26,15 @@ function hallwayActions(action, state) {
             case 'ent4':  
                newState = Object.assign(newState, {
                 dialog: 'You can see 2 offices on either side of you. The hallway continues forward in front of you.',
-                choices: ['Daves Office is visible on the left', 'The Hallway seems to loop around at this point', 'A large oak door secured with a hefty lock is visible to the right.'],
-                actions: ['daveoffice.ent', 'hallway.confent', 'hallway.ent6'],
+                choices: ['Daves Office is visible on the left', 'The Hallway continues around here', 'A large oak door secured with a hefty lock is visible to the right.'],
+                actions: ['daveoffice.ent', 'hallway.ent5', 'hallway.ent6'],
             });
             break;
             case 'ent5':  
                newState = Object.assign(newState, {
-                dialog: 'You can see 2 offices on either side of you. The hallway continues forward in front of you.',
-                choices: ['', '', ''],
-                actions: ['', '', ''],
+                dialog: 'It appears to be an exit door. Only go through this door when you are done with all your reasearch in the office. The Hallway continues in front of you',
+                choices: ['The big oak doors appear to lead to the outside.', 'The hallway makes a sharp turn ahead.', ''],
+                actions: ['finale.door', 'hallway.confent', ''],
             });
             break;
             case 'ent6':

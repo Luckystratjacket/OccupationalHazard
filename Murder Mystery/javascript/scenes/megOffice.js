@@ -29,11 +29,25 @@ function megofficeActions(action, state) {
                 actions: ['megoffice.meg2', 'megoffice.meg3'],
             });
             break;
-            case '':  
-               newState = Object.assign(newState, {
-                dialog: '',
-                choices: ['', ''],
-                actions: ['', ''],
+        case 'dia3':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]- I brought him coffee in the morning. Made it myself. Used to work as a Barista before I got this job. Shows you what a Bachelor\'s Degree in Chemistry can get you. Ha.',
+                choices: ['What do you know about John?', 'Were you and John Close?'],
+                actions: ['megoffice.meg3', 'megoffice.meg5'],
+            });
+            break;
+        case 'dia2':
+            newState = Object.assign(newState, {
+                dialog: '[Megahn McWaters]- "These pills I have been using since I was a child. Sickle Cell disease hit me as a child. Don\'t take one! They\'re incredibly toxic if you eat one!',
+                choices: ['What Happens if you put one of those pills in a cup of coffee?', 'What do you know about John?'],
+                actions: ['megoffice.dia4', 'megoffice.meg3'],
+            });
+            break;
+        case 'dia4':
+            newState = Object.assign(newState, {
+                dialog: '[Meghan McWaters]- The coffee would become deadly, I guess. Toxic to anyone who consumed it. Wait... Youre not thinking that I poisoned him, are you?',
+                choices: ['What do you know about John?', 'Were you and John close?'],
+                actions: ['megoffice.meg31', 'megoffice.meg5'],
             });
             break;
         case 'meg2':
