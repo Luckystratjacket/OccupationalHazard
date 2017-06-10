@@ -31,7 +31,7 @@ function finaleActions(action, state) {
             break;
             case 'credits':  
                newState = Object.assign(newState, {
-                dialog: 'This game was made by Caleb Maggio, Ian Atkin, and Zeel Patel in Mr. Ray\'s computer class. We hope you enjoyed it! Thanks for playing!',
+                dialog: 'This game was made by Caleb Maggio, Ian Atkins, and Zeel Patel in Mr. Ray\'s computer class. We hope you enjoyed it! Thanks for playing!',
                 choices: ['New Game'],
                 actions: ['game.new'],
             });

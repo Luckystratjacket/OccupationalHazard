@@ -30,7 +30,7 @@ function hallwayActions(action, state) {
                 dialog: 'You can see 2 offices on either side of you. The hallway continues forward in front of you.',
                 choices: ['Daves Office is visible on the left', 'The Hallway continues around here', 'A large oak door secured with a hefty lock is visible to the right.'],
                 actions: ['daveoffice.ent', 'hallway.ent5', 'hallway.ent6'],
-                background: [{ url: './img/hallway_1.png', width: '100%', height: '100%' }],
+                background: [{ url: './img/doorWLock.png', width: '100%', height: '100%' }],
             });
             break;
             case 'ent5':  

@@ -6,6 +6,7 @@ function hiddenroomActions(action, state) {
                 dialog: 'You open up the big creaky door and find yourself in a dusty room. It is completely barren. What a lame excuse for a secret room.',
                 choices: ['Exit back into the hallway', ''],
                 actions: ['hallway.ent4', ''],
+                background: [{ url: './img/secretRoom.png', width: '100%', height: '100%' }],
             });
             
 
