@@ -77,6 +77,9 @@ function processAction(action, state) {
     if (actionCategory == 'hiddenroom') {
         newState = hiddenroomActions(actionIdentifier, state);
     }
+    if (actionCategory == 'finale') {
+        newState = finaleActions(actionIdentifier, state);
+    }
 
 
     setGameState(newState);
